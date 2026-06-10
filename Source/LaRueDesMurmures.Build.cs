@@ -1,13 +1,12 @@
 using UnrealBuildTool;
 using System.Collections.Generic;
 
-public class LaRueDesMurmuresEditorTarget : TargetRules
+public class LaRueDesMurmuresTarget : TargetRules
 {
-    public LaRueDesMurmuresEditorTarget(
-        TargetInfo Target)
+    public LaRueDesMurmuresTarget(TargetInfo Target)
         : base(Target)
     {
-        Type = TargetType.Editor;
+        Type = TargetType.Game;
 
         DefaultBuildSettings =
             BuildSettingsVersion.V5;
