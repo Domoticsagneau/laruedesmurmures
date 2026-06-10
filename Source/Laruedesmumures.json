@@ -1,0 +1,41 @@
+{
+  "events":
+  [
+    {
+      "time":0,
+      "camera":"Cam01",
+      "action":"intro"
+    },
+
+    {
+      "time":5,
+      "camera":"Cam01",
+      "action":"walk"
+    },
+
+    {
+      "time":25,
+      "camera":"Cam02",
+      "action":"switch_camera",
+      "parameter":"1"
+    },
+
+    {
+      "time":60,
+      "camera":"Cam03",
+      "action":"shadow_appear"
+    },
+
+    {
+      "time":63,
+      "camera":"Cam03",
+      "action":"shadow_disappear"
+    },
+
+    {
+      "time":240,
+      "camera":"Cam05",
+      "action":"mirror_reveal"
+    }
+  ]
+}
