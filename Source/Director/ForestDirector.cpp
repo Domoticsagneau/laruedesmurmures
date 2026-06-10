@@ -132,13 +132,15 @@ void AForestDirector::ExecuteEvent(
     {
         if (CameraManager)
         {
-            int32 CameraIndex =
-                FCString::Atoi(
-                    *Event.Parameter);
-
-            CameraManager
-                ->SwitchCamera(
-                    CameraIndex);
+            //int32 CameraIndex =
+            //    FCString::Atoi(
+            //        *Event.Parameter);
+            CameraManager->BlendToCamera(
+            Event.Parameter,
+            1.5f);
+            //CameraManager
+            //    ->SwitchCamera(
+            //        CameraIndex);
         }
     }
 
