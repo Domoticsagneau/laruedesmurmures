@@ -15,9 +15,8 @@
 
     {
       "time":25,
-      "camera":"Cam02",
       "action":"switch_camera",
-      "parameter":"1"
+      "parameter":"Cam02"
     },
 
     {
