@@ -11,7 +11,7 @@ class ACameraManager;
 class AShadowActor;
 class ALeoCharacter;
 class AMirrorSystem;
-
+class ALevelSequenceController;
 
 UCLASS()
 class LARUEDESMURMURES_API AForestDirector
@@ -67,4 +67,6 @@ public:
     UPROPERTY(EditAnywhere)
     AMirrorSystem* MirrorSystem;
 
+    UPROPERTY(EditAnywhere)
+    ALevelSequenceController* SequenceController;
 };
