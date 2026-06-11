@@ -1,8 +1,8 @@
 #include "ForestDirector.h"
-
 #include "StoryLoader.h"
-
 #include "Misc/Paths.h"
+#include "LeoCharacter.h"
+#include "ShadowActor.h"
 
 AForestDirector::AForestDirector()
 {
@@ -89,47 +89,39 @@ void AForestDirector::ExecuteEvent(
             Warning,
             TEXT("INTRO"));
     }
-    else if (
-        Event.Action == "walk")
-    {
+    else if (Event.Action == "walk") {
         if (Leo)
         {
             Leo->WalkForward();
         }
     }
 
-    else if (
-        Event.Action == "run")
-    {
+    else if (Event.Action == "run") {
         if (Leo)
         {
             Leo->RunForward();
         }
     }
-
-    else if (
-        Event.Action ==
-        "shadow_appear")
-    {
+    else if (Event.Action == "stop") {
+        Leo->StopMovement();
+    }
+    else if (Event.Action == "look_behind") {
+        Leo->LookBehind();
+    }        
+    else if (Event.Action == "shadow_appear") {
         if (Shadow)
         {
             Shadow->Appear();
         }
     }
-    else if (
-        Event.Action ==
-        "shadow_disappear")
-    {
+    else if (Event.Action == "shadow_disappear") {
         if (Shadow)
         {
             Shadow->Disappear();
         }
     }
 
-    else if (
-        Event.Action ==
-        "switch_camera")
-    {
+    else if (Event.Action == "switch_camera") {
         if (CameraManager)
         {
             //int32 CameraIndex =
@@ -144,10 +136,7 @@ void AForestDirector::ExecuteEvent(
         }
     }
 
-    else if (
-        Event.Action ==
-        "mirror_reveal")
-    {
+    else if (Event.Action == "mirror_reveal") {
         UE_LOG(
             LogTemp,
             Warning,
