@@ -154,6 +154,12 @@ void AForestDirector::ExecuteEvent(
     else if (Event.Action == "whisper") {
         Whisper->PlayRandomWhisper(Leo->GetActorLocation(),600.f);
     }
+    else if (Event.Action == "play_sequence") {
+        SequenceController->PlaySequence(Event.Parameter);
+    }    
+    else if (Event.Action == "stop_sequence") {
+        SequenceController->StopSequence();
+    }
 }
 
 void AForestDirector::HandleTrigger(
