@@ -142,4 +142,13 @@ void AForestDirector::ExecuteEvent(
             Warning,
             TEXT("Mirror reveal"));
     }
+    else if (Event.Action == "sunset") {
+        DayNight->StartSunset();
+    }
+    else if (Event.Action == "night") {
+        DayNight->StartNight();
+    }
+    else if (Event.Action == "whisper") {
+        Whisper->PlayRandomWhisper(Leo->GetActorLocation(),600.f);
+    }
 }
