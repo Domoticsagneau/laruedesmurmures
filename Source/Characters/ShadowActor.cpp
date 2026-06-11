@@ -36,3 +36,37 @@ void AShadowActor::MoveToward(
 
     bMoving = true;
 }
+
+void AShadowActor::Tick(
+    float DeltaTime)
+{
+    Super::Tick(DeltaTime);
+
+    if (!bMoving)
+    {
+        return;
+    }
+
+    FVector Current =
+        GetActorLocation();
+
+    FVector Direction =
+        (MoveTarget - Current)
+        .GetSafeNormal();
+
+    FVector NewLocation =
+        Current +
+        Direction * 120.f *
+        DeltaTime;
+
+    SetActorLocation(
+        NewLocation);
+
+    if (FVector::Dist(
+        NewLocation,
+        MoveTarget)
+        < 50.f)
+    {
+        bMoving = false;
+    }
+}
