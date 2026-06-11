@@ -50,8 +50,7 @@ public:
     UPROPERTY(EditAnywhere)
     AShadowActor* Shadow;
 
-    UPROPERTY(EditAnywhere)UPROPERTY(EditAnywhere)
-    
+    UPROPERTY(EditAnywhere)
     AWhisperSystem* Whisper;
     ALeoCharacter* Leo;
 
