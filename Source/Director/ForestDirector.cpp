@@ -152,3 +152,31 @@ void AForestDirector::ExecuteEvent(
         Whisper->PlayRandomWhisper(Leo->GetActorLocation(),600.f);
     }
 }
+
+void AForestDirector::HandleTrigger(
+    FString TriggerID)
+{
+    if (TriggerID == "ForestEntrance")
+    {
+        Shadow->Appear();
+
+        Whisper->PlayRandomWhisper(
+            Leo->GetActorLocation(),
+            400.f);
+    }
+
+    else if (
+        TriggerID == "WarningPanel")
+    {
+        CameraManager
+        ->BlendToCamera(
+            "Cam04",
+            1.5f);
+    }
+
+    else if (
+        TriggerID == "MirrorZone")
+    {
+        ExecuteMirrorReveal();
+    }
+}
