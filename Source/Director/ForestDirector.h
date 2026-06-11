@@ -10,6 +10,8 @@
 class ACameraManager;
 class AShadowActor;
 class ALeoCharacter;
+class AMirrorSystem;
+
 
 UCLASS()
 class LARUEDESMURMURES_API AForestDirector
@@ -61,5 +63,8 @@ public:
 
     UPROPERTY(EditAnywhere)
     AWhisperSystem* Whisper;
+
+    UPROPERTY(EditAnywhere)
+    AMirrorSystem* MirrorSystem;
 
 };
