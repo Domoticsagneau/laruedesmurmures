@@ -141,6 +141,9 @@ void AForestDirector::ExecuteEvent(
             LogTemp,
             Warning,
             TEXT("Mirror reveal"));
+        if (MirrorSystem) {
+            MirrorSystem->StartMirrorReveal();
+        }
     }
     else if (Event.Action == "sunset") {
         DayNight->StartSunset();
