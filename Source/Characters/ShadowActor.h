@@ -28,6 +28,8 @@ public:
     void MoveToward(
         FVector TargetLocation);
 
+    virtual void Tick(float DeltaTime) override;
+
 private:
 
     bool bMoving;
