@@ -1,0 +1,29 @@
+{
+    "FileVersion": 3,
+    "EngineAssociation": "5.5",
+    "Category": "Games",
+    "Description": "La Rue Des Murmures - Thriller Animation Unreal Engine 5.4",
+    "Modules":
+    [
+        {
+            "Name": "LaRueDesMurmures",
+            "Type": "Runtime",
+            "LoadingPhase": "Default"
+        }
+    ],
+    "Plugins":
+    [
+        {
+            "Name": "Niagara",
+            "Enabled": true
+        },
+        {
+            "Name": "ModelingToolsEditorMode",
+            "Enabled": false
+        }
+    ],
+    "TargetPlatforms":
+    [
+        "Linux"
+    ]
+}
